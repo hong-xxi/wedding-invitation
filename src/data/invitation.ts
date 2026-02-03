@@ -1,9 +1,9 @@
 export const invitation = {
-    groom: "박정호",
-    bride: "김수진",
+    groom: "김수환",
+    bride: "홍혜진",
   
-    dateText: "2029년 10월 28일 일요일 오후 1시",
-    venue: "베스티안웨딩홀 다이아몬드홀",
+    dateText: "2026년 6월 27일 토요일 오후 2시",
+    venue: "더 바실리움",
   
     message: [
       "혼들림 없는 믿음의 첫걸음을",
@@ -15,8 +15,8 @@ export const invitation = {
     ],
   
     accounts: {
-      groom: "국민은행 000000-00-000000",
-      bride: "신한은행 000-000-000000",
+      groom: "국민은행 ",
+      bride: "우리은행 1002-762-616743",
     },
   };
   
