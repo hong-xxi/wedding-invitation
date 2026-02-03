@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const images = [
     "/images/1.jpg",
     "/images/2.jpg",
@@ -10,27 +12,60 @@ const images = [
   ];
   
   export default function GallerySection() {
+    const [active, setActive] = useState<string | null>(null);
+  
     return (
       <section>
-        <div
-          style={{
-            display: "flex",
-            overflowX: "auto",
-            gap: "12px",
-          }}
-        >
-          {images.map((src, i) => (
+        <p style={{ fontSize: "15px", marginBottom: "16px" }}>갤러리</p>
+  
+        <div style={styles.row}>
+          {images.map((src) => (
             <img
-              key={i}
+              key={src}
               src={src}
-              style={{
-                width: "200px",
-                borderRadius: "4px",
-              }}
+              style={styles.thumb}
+              onClick={() => setActive(src)}
             />
           ))}
         </div>
+  
+        {active && (
+          <div style={styles.overlay} onClick={() => setActive(null)}>
+            <img src={active} style={styles.modal} />
+          </div>
+        )}
       </section>
     );
   }
   
+  const styles: Record<string, React.CSSProperties> = {
+    row: {
+      display: "flex",
+      gap: "12px",
+      overflowX: "auto",
+      paddingBottom: "8px",
+    },
+    thumb: {
+      width: "72px",
+      height: "72px",
+      borderRadius: "8px",
+      objectFit: "cover",
+      cursor: "pointer",
+      flexShrink: 0,
+      boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+    },
+    overlay: {
+      position: "fixed",
+      inset: 0,
+      backgroundColor: "rgba(0,0,0,0.6)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      zIndex: 999,
+    },
+    modal: {
+      maxWidth: "90%",
+      maxHeight: "80%",
+      borderRadius: "12px",
+    },
+  };
