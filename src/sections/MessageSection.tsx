@@ -3,7 +3,7 @@ import { invitation } from "../data/invitation";
 export default function MessageSection() {
   return (
     <section>
-      <p style={{ fontSize: "14px", marginBottom: "24px" }}>10 │ 23</p>
+      <p style={{ fontSize: "14px", marginBottom: "24px" }}>06 │ 27</p>
       <div
         style={{
           width: "1px",

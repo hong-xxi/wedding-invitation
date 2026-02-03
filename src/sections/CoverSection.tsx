@@ -16,7 +16,7 @@ export default function CoverSection() {
         우리의 아름다운 날
       </p>
 
-      <p style={{ marginTop: "8px", fontSize: "12px" }}>2029.10.28</p>
+      <p style={{ marginTop: "8px", fontSize: "12px" }}>2026.06.27</p>
     </section>
   );
 }

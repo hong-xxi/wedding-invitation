@@ -1,16 +1,18 @@
 import { useState } from "react";
 
+const BASE_URL = import.meta.env.BASE_URL as string;
+
 const images = [
-    "/images/1.jpg",
-    "/images/2.jpg",
-    "/images/3.jpg",
-    "/images/4.jpg",
-    "/images/5.jpg",
-    "/images/6.jpg",
-    "/images/7.jpg",
-    "/images/8.jpg",
-  ];
-  
+  `${BASE_URL}images/1.jpg`,
+  `${BASE_URL}images/2.jpg`,
+  `${BASE_URL}images/3.jpg`,
+  `${BASE_URL}images/4.jpg`,
+  `${BASE_URL}images/5.jpg`,
+  `${BASE_URL}images/6.jpg`,
+  `${BASE_URL}images/7.jpg`,
+  `${BASE_URL}images/8.jpg`,
+];
+
   export default function GallerySection() {
     const [active, setActive] = useState<string | null>(null);
   
