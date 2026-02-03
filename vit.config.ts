@@ -6,5 +6,6 @@ export default defineConfig({
   base: "/wedding-invitation/",
   build: {
     outDir: "docs",
-  },
+    emptyOutDir: true
+  }
 });
