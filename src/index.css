@@ -1,51 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400&display=swap");
-
-:root {
-    --mint-bg: #eaf4f1;
-    --mint-sub: #cfe6df;
-    --text-main: #2e2e2e;
-    --text-sub: #6f7f7a;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--mint-bg);
-    color: var(--text-main);
-    font-family: "Noto Serif KR", serif;
-  }
-  
-  #root {
-    max-width: 420px;
-    margin: 0 auto;
-    background-color: var(--mint-bg);
-  }
-  
-  section {
-    padding: 48px 20px;
-    box-sizing: border-box;
-  }
-  
-
-/* 세로쓰기 */
-.vertical {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  letter-spacing: 4px;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e3f3ee; /* 민트톤 */
+  font-family: "Noto Serif KR", serif;
+  text-align: center;
 }
 
-/* 공통 fade */
-.fade {
-  animation: fade 1.2s ease forwards;
+#root {
+  max-width: 420px;
+  margin: 0 auto;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+section {
+  padding: 48px 20px;
+}
+
+h1, h2, h3, p {
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+p {
+  font-size: clamp(14px, 3.5vw, 16px);
+}
+
+h1 {
+  font-size: clamp(22px, 6vw, 28px);
+}
+
+h2 {
+  font-size: clamp(18px, 5vw, 22px);
 }
